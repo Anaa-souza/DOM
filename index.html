@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Adicionar itens</title>
+</head>
+<body>
+
+    <h2>Lista</h2>
+
+    <ul id="minhaLista">
+      
+    </ul>
+
+    <button onclick="adicionarItem()">Adicionar Item</button>
+
+    <script>
+        function adicionarItem() {
+           
+            const novoItem = document.createElement("li");
+
+           
+            novoItem.textContent = "Novo item";
+
+         
+            const lista = document.getElementById("minhaLista");
+
+            
+            lista.appendChild(novoItem);
+        }
+    </script>
+
+</body>
+</html>

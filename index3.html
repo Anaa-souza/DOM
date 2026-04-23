@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar nomes</title>
+</head>
+<body>
+    <button id="btn">Mostrar nomes</button>
+    <ul id="lista"></ul>
+
+    <script>
+        const botao = document.getElementById("btn");
+        const lista = document.getElementById("lista");
+
+        //array com nomes
+        const nomes = ["Ana", "Pedro", "Lucas","Mariana","João"];
+      botao.addEventListener("click", () => {
+         const fragmento = document.createDocumentFragment();
+      nomes.forEach(nome => {
+        const li = document.createElement("li");
+        li.textContent = nome;
+        fragmento.appendChild(li);
+      });
+      lista.appendChild(fragmento);
+    });
+  </script>
+</body>
+</html>
